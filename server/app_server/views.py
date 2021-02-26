@@ -14,8 +14,8 @@ from .serializers import LocationSerializers
 import joblib
 import math
 from sklearn.metrics.pairwise import euclidean_distances
-from .modelclass import model
-path = os.path.join(Path(__file__).resolve().parent , 'static/clf.joblib')
+
+path = os.path.join(Path(__file__).resolve().parent , 'static/clf_linear.joblib')
 svm_model = joblib.load(path)
 class AppService(View):
 
@@ -32,11 +32,13 @@ class AppService(View):
                     predict_result = svm_model.predict(mfcc_arr)
                     if int(predict_result[0]) == 1:
                         result = True
-                    i += 1
-
+                    i += 1 
                 if result == True:
-                   location = Location.objects.create(lon = data['lon'],lat = data['lat'])
-                   location.save()
+                    try:
+                        location = Location.objects.create(lon = data['lon'],lat = data['lat'])
+                        location.save()
+                    except:
+                        return JsonResponse({'status': 'Error', 'result': result})
                 return JsonResponse({'status': 'Success', 'result': result})
             except:
                 return JsonResponse({'status': 'Fail'})
