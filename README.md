@@ -7,6 +7,7 @@ If want to test Server locally, using command line to
 2. install all dependcies in the server/requirement.txt
 3. cd into server folder
 4. python3 managy.py runserver
+
 The main page(under default setting) is http://127.0.0.1:8000/
 The api under http://127.0.0.1:8000/api
 predict page http://127.0.0.1:8000/app/perdict
@@ -15,6 +16,8 @@ For app
 1.Install IONIC
 2.cd to the app folder
 3.Ionic serve
+
+
 The recording function of Ionic can only used when test on real mobile phone, for test in android mobile phone using
 ionic open android to open android studio and run on vm/real mobile phone
 
