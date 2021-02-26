@@ -1,0 +1,7 @@
+{
+  "name": "chainsaw-detection",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

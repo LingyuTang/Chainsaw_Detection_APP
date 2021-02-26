@@ -1,0 +1,14 @@
+ion-toolbar {
+    --color: #ffffff;
+    --background: #428f53;
+}
+#cardTitle{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+#cardSubTitle{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+ion-content{
+    --ion-background-color:#f9f9f9;
+}
